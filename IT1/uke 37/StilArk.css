@@ -1,0 +1,52 @@
+body{
+  background-color: #D9DCD8;
+  margin: 0;
+}
+
+*{
+font-family: 'Kanit', sans-serif;
+}
+header{
+width: 40%;
+margin-left: auto;
+margin-right: auto;
+}
+h1{
+font-size: 60px;
+text-align: center;
+background-color: red;
+text-decoration: underline;
+}
+div{
+border: 5px solid red;
+margin-top: 80px;
+margin-bottom: 80px;
+margin-right: 150px;
+margin-left: 80px;
+padding-left: 10px;
+padding-right: 10px;
+background-color: #ededed;
+}
+
+img{
+display: block;
+margin: auto;
+}
+ul{
+  list-style-type: none;
+  text-align: center;
+}
+li{
+  display:inline;
+}
+
+li a{
+  text-decoration:none;
+  background-color: red;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 120%;
+  color: white;
+  border:5px solid black;
+}
