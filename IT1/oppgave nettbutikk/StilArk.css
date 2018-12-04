@@ -1,19 +1,30 @@
 header {
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-auto-rows: 76px;
   align-items: center;
   background-color: rgb(255, 0, 0);
   font-size: 25px;
   padding-top: 5px;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 a>img {
   height: 75px;
 }
-
+.navbar1{
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-auto-rows: 76px;
+  align-items: center;
+}
 section {
   margin-left: 5px;
+}
+.searchbar{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  font-size: 15px;
+  margin-top: 0;
 }
 
 body {
@@ -76,8 +87,8 @@ main {}
   background-color: rgb(181, 181, 181);
 }
 
-h1 {
-  margin-top: 100px;
+.overskrift{
+  margin-top: 200px;
   text-align: center;
 }
 
@@ -89,7 +100,8 @@ h1 {
 .tilbud {
   display: grid;
   grid-template-columns: repeat(6,1fr);
-  background-color: gray;
+  background-image: linear-gradient(to bottom, rgb(255, 0, 0), white);
+  align-items: center;
 }
 .stort-tilbud{
   grid-column: span 3;
@@ -111,7 +123,23 @@ p{
   color: rgb(0,255,255);
   font-size: 30px;
   font-family: cursive;
-  top: 50px;
-  left: 50px;
+  top: 40px;
+  left: 40px;
   /*klarte å posisjonere teksten midt på bildet som vi begynte på i timen*/
+}
+.tilbud #stasjonær{
+  width: 60%;
+  margin: auto;
+}
+.tilbud #datamus{
+  width: 90%;
+  margin: auto;
+}
+.tilbud #musematte{
+  width: 70%;
+  margin: auto;
+}
+.tilbud #headset{
+  width: 80%;
+  margin: auto;
 }
