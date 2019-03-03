@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="pokemon.css">
+      <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyAV3NzChgklm2G85uLsPRlS6jDrYRcHzA4",
+          authDomain: "pokemon2-4eadd.firebaseapp.com",
+          databaseURL: "https://pokemon2-4eadd.firebaseio.com",
+          projectId: "pokemon2-4eadd",
+          storageBucket: "pokemon2-4eadd.appspot.com",
+          messagingSenderId: "891531219318"
+        };
+        firebase.initializeApp(config);
+      </script>
+      <style media="screen">
+
+      </style>
+  </head>
+  <body>
+    <header>
+      <form class="" action="index.html" method="post">
+        <button type="button" name="button" id="register">Register</button>
+        </form>
+        <form class="" action="index.html" method="post">
+        <button type="button" name="button" id="LogIn">Log in</button>
+      </form>
+      <img src="pokemon logo.png" alt="Pokemonlogo"><br>
+      <button type="button" name="button" onclick="show20StrongestPokemon()">Show strongest</button>
+      <button type="button" name="button" onclick="showAllPokemon()">Show all</button>
+      <button type="button" name="button" onclick="Dark()">Darkmode</button>
+      <button type="button" name="button" onclick="Light()">Lightmode</button>
+
+
+
+    </header>
+    <main>
+
+        <div id="load"><img src="loading2.gif" alt=""></div>
+      <section id="secPokemon">
+
+      </section>
+    </main>
+
+    <script type="text/javascript">
+      //Referanser til HTML-elementer
+      const secPokemon = document.querySelector("#secPokemon");
+      const load = document.querySelector("#load");
+
+
+      //Referanser til firebase-databasen
+      const db = firebase.database();
+      const pokemon = db.ref("pokemon");
+
+      const css = document.querySelector("style");
+
+      // pokemon.on("child_added", genererHTML);
+
+      showAllPokemon();
+
+      function showAllPokemon(){
+        secPokemon.innerHTML = ``;
+        pokemon.on("child_added",genererHTML);
+      }
+
+
+      function show20StrongestPokemon(){
+        secPokemon.innerHTML = ``;
+        pokemon
+        .orderByChild("Max CP")
+        .limitToLast(20)
+        .on("child_added",genererHTML);
+      }
+
+      function genererHTML(snapshot){
+       let key = snapshot.key;
+       let pObject = snapshot.val();
+
+       secPokemon.innerHTML += `
+         <section class="pokemon">
+           <h3>${key}:${pObject["Name"]}</h3>
+           <img id="imgPoke" src=${pObject["Image URL"]}>
+           <p>Type: ${pObject["Type 1"]}</p>
+           <p>Max HP: ${pObject["Max HP"]}</p>
+           <p>Max CP: ${pObject["Max CP"]}</p>
+         </section>
+       `
+       if (secPokemon != null) {
+         load.innerHTML =``
+       }
+      }
+
+
+      function Dark(){
+          css.innerHTML = `
+          body{
+            background-color: black;
+            color: white;
+            transition-duration: .7s;
+           }
+           .pokemon{
+             background-color: rgb(55, 55, 55);
+           }
+           .pokemon:hover{
+            background-color: rgb(116, 116, 116);
+           }`
+          }
+          function Light(){
+              css.innerHTML = `
+              body{
+                background-color: white;
+                color: black;
+                transition-duration: .7s;
+               }
+               .pokemon{
+                 transition: 0.5s;
+               }
+               .pokemon:hover{
+                background-color: rgb(190, 190, 190);
+               }`
+              }
+
+    </script>
+  </body>
+</html>
