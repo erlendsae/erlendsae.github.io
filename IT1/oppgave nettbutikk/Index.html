@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="nb" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gamegear</title>
-    <link rel="shortcut icon" href="logo rød.png">
-    <link rel="stylesheet" href="StilArk.css">
-    <script src="Java.js"></script>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gamegear</title>
+  <link rel="shortcut icon" href="logo rød.png">
+  <link rel="stylesheet" href="StilArk.css">
 
-  </head>
-  <body>
-      <header>
-        <div class="navbar1">
-        <section>
+</head>
+
+<body>
+  <header>
+    <div class="navbar1">
+      <section>
         <div class="logo">
           <a href="Index.html"><img src="logo rød.png" alt="logo til nettsiden"></a>
         </div>
@@ -25,67 +25,98 @@
       </section>
       <section>
         <div class="dropdown">
-
-
-            <div class="dropdown">
-              <button class="dropbtn"><b>Utstyr</b>
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="#">Headset</a>
-                <a href="#">Musematte</a>
-                <a href="#">Kontroller</a>
-              </div>
+          <div class="dropdown">
+            <button class="dropbtn"><b>Utstyr</b>
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="handlekurv-headset.html">Headset</a>
+              <a href="handlekurv-musematte.html">Musematte</a>
+              <a href="handlekurv-gamingmus.html">Gamingmus</a>
+              <a href="handlekurv-PC.html">Stasjonær PC</a>
+              <a href="handlekurv-keyboard.html">Keyboard</a>
             </div>
           </div>
+        </div>
 
       </section>
       <section>
         <div class="handlekurv">
-          <a href="kjop.html"><img src="handlevogn1.png" alt="handlekurv"></a>
+          <a href="handlekurv-tom.html"><img src="handlevogn1.png" alt="handlekurv"></a>
         </div>
 
       </section>
-        </div>
-      <div class="searchbar">
+    </div>
+    <div class="searchbar">
 
-        <div class="">
-          <h1>Søk:</h1>
-        </div>
-          <input id="InputNavn" type="text" name="Navn" placeholder="Skriv inn navnet ditt">
-      </div>
-      </header>
-
-      <main>
-        <h1 class="overskrift">Nyheter</h1>
-        <div class="nyheter">
-        <a href=""><img src="juletilbud skygge.png" alt="" id="juletilbud"></a>
+      <div class="">
+        <h1>Søk:</h1>
       </div>
 
-      <h1 class="overskrift">Tilbud</h1>
-      <div class="tilbud">
-        <div class="stort-tilbud" id="stasjonær">
-          <img src="stasjonær2.png" alt="">
-        </div>
-        <div class="stort-tilbud" id="datamus">
-          <img src="gaming mus gjennomsiktig3.png" alt="">
-        </div>
-        <div class="lite-tilbud" id="musematte">
-          <img src="musematte 1.png" alt="">
-        </div>
-        <div class="lite-tilbud">
-          <img src="keyboard-tilbud.png" alt="">
-          <p>Keyboard til kun 599kr!</p>
-        </div>
-        <div class="lite-tilbud" id="headset">
-          <img src="headset-tilbud3.png" alt="salg av headset">
-        </div>
+      <form action="Under konstruksjon.html" method="post">
+        <input id="InputNavn" type="text" name="Navn" placeholder="Søk her">
+      </form>
 
+      <div class="pil">
+        <img src="pil-opp.png" alt="pil">
       </div>
-      </main>
 
-      <footer>
+    </div>
+  </header>
 
-      </footer>
-  </body>
+  <main>
+    <h1 class="tittel">Gamegear</h1>
+    <h1 class="overskrift2">Nyheter</h1>
+    <div class="nyheter">
+      <a href="juletilbud.html"><img src="juletilbud skygge.png" alt="" id="juletilbud"></a>
+    </div>
+
+    <h1 class="overskrift2">Tilbud</h1>
+    <div class="tilbud">
+
+      <div class="stort-tilbud" id="stasjonær">
+        <a href=handlekurv-PC.html>
+          <img src="stasjonær3.png" alt="Stajonær PC">
+        </a>
+        <p id="tekst-s">25% avslag!</p>
+      </div>
+      <div class="stort-tilbud" id="datamus">
+        <a href="handlekurv-gamingmus.html">
+          <img src="gaming mus gjennomsiktig3.png" alt="Datamus">
+          <p id="tekst-gm">Gaming mus kun 699kr!</p>
+        </a>
+      </div>
+      <!-- Datamusen ovenfor hadde egentlig grønt lys foran, men jeg gjorde det blått !-->
+      <div class="lite-tilbud" id="musematte">
+        <a href="handlekurv-musematte.html">
+          <img src="musematte u2.png" alt="Musematte">
+        </a>
+        <p id="tekst-m">Musematte til halv pris!</p>
+      </div>
+      <div class="stort-tilbud" id="keyboard">
+        <a href="handlekurv-keyboard.html">
+          <img src="keyboard-tilbud3.png" alt="Keyboard">
+        </a>
+        <p id="tekst-k">Keyboard til kun 1500kr!</p>
+      </div>
+      <div class="lite-tilbud" id="headset">
+        <a href="handlekurv-headset.html">
+          <img src="headset-tilbud5.png" alt="salg av headset">
+        </a>
+        <p id="tekst-h">Headset tidligere til <b>1299kr</b>, nå bare 899kr!</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <h1>Kontaktinformasjon</h1>
+    <div id="footer">
+      <br>
+      For å kontakte Gamegear klikk på linken <a href="Under konstruksjon.html">her</a> <br>
+      © 2018-2018, Gamegear.html
+    </div>
+  </footer>
+</body>
+
 </html>

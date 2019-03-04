@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bryllup</title>
+  <link rel="stylesheet" href="StilArk.css">
+</head>
+
+<body>
+  <header>
+    <i>
+      <h1>Bryllup</h1>
+    </i>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Hjemmeside</a></li>
+        <li><a href="index3.html">Barnebursdag</a></li>
+        <li><a href="index4.html">Klassefest</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <main>
+    <img class="bryllup" src="bryllup.jpg" alt="Et bilde av et bryllup">
+
+    <nav class="bryllup2">
+      <!-- KOMMENTAR: Skjemaet skal ligge i et form-element -->
+      <label for="InputNavn">Navn:</label>
+      <input id="InputNavn" type="text" name="Navn" placeholder="Skriv inn navnet ditt"> <br>
+
+      <label>
+        <h2>Kommer du med eller uten Følge?</h2>
+      </label>
+      <input id="Rbmed" type="radio" name="RbFølge" value="Med"><label class="følge" for="Rbmed">Med</label>
+      <input id="Rbuten" type="radio" name="RbFølge" value="Uten"><label class="følge" for="Rbuten">Uten</label>
+      <br> <br />
+      <!--KOMMENTAR: Pass på at struktur/hierarki for nøstede tagger stemmer overens med
+      innhoppene i koden. -->
+      <label for="">
+        <h2>Valg av mat</h2>
+      </label>
+      <input id="CbTaco" type="checkbox" name="CbMat" value="Taco"><label for="CbTaco">Taco</label>
+      <input id="CbFisk" type="checkbox" name="CbMat" value="Fisk"><label for="CbFisk">Fisk</label>
+      <input id="CbPizza" type="checkbox" name="CbMat" value="Pizza"><label for="CbPizza">Pizza</label>
+      <form action="index.html" method="post">
+        <button type="Submit" name="Registreringsknapp">Send inn</button>
+
+      </form>
+    </nav>
+
+
+
+
+
+
+
+  </main>
+</body>
+
+</html>

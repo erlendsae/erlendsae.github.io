@@ -1,0 +1,40 @@
+p::first-line{
+  color: red;
+}
+table{
+
+}
+input:focus{
+  width: 500px;
+}
+h1{
+
+}
+body{
+  background-color: #e9e9e9;
+}
+p:hover{
+  padding-left: 30px;
+
+}
+img{
+  display: block;
+  margin: auto;
+  transition: 10s;
+
+}
+img::after{
+
+content: "Dette bildet er beskyttet av åndeverksloven";
+
+}
+img:hover{
+  transform: scale(2.0);
+  transform: rotate(360000000000000000000deg);
+
+
+}
+img:active{
+transform: translateX(5000px);
+
+}

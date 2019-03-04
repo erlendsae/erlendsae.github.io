@@ -1,0 +1,120 @@
+  <!DOCTYPE html>
+  <html lang="nb" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title>Pokémon</title>
+        <link rel="stylesheet" href="pokemon.css">
+      <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+        <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDRfrulHRvdtoqHr0NH268CbvuerNaGTu0",
+    authDomain: "pokemon-95a29.firebaseapp.com",
+    databaseURL: "https://pokemon-95a29.firebaseio.com",
+    projectId: "pokemon-95a29",
+    storageBucket: "",
+    messagingSenderId: "568040067442"
+  };
+  firebase.initializeApp(config);
+      </script>
+
+    </head>
+    <body>
+      <header>
+
+
+          <button type="button" name="button" class="btn success" onclick="visSterkeste()">Sterkeste Pokémon</button>
+          <button type="button" name="button" class="btn info" onclick="visNummer()">Nummer</button>
+          <button type="button" name="button" class="btn warning" onclick="Dark()">Mørketema</button>
+          <button type="button" name="button" class="btn danger" onclick="Light()">Lystema</button>
+
+      </header>
+      <main>
+        <h4 id="load">Loader pokémon..</h4>
+        <section id="secAllePokemon">
+        </section>
+        <style media="screen">
+
+        </style>
+      </main>
+
+      <script type="text/javascript">
+        const db = firebase.database();
+        const pokemon = db.ref("pokemon");
+        const css = document.querySelector("style");
+        const load = document.querySelector("#load")
+
+        const secAllePokemon = document.querySelector("#secAllePokemon");
+
+
+
+        function visPokemon(snapshot){
+          let key = snapshot.key;
+          let poke = snapshot.val();
+          secAllePokemon.innerHTML += `
+          <section class"pokemon">
+
+            <h3>${key}:${poke.Name}</h3>
+            <img src='${poke["Image URL"]}'>
+            <p>Max CP:${poke["Max CP"]}</p>
+            <p>Max HP:${poke["Max HP"]}</p>
+            <p>Type:${poke["Type 1"]} og ${poke["Type 2"]}</p>
+
+          </section>
+          `
+          if (secAllePokemon != null) {
+            load.innerHTML =``
+          } }
+
+
+          pokemon
+            .orderByKey()
+            .limitToFirst(20)
+            .on("child_added",visPokemon);
+
+
+      function visNummer(){
+        secAllePokemon.innerHTML = ``;
+        pokemon
+          .orderByKey()
+          .limitToFirst(20)
+          .on("child_added",visPokemon);
+        }
+
+          function visSterkeste(){
+            secAllePokemon.innerHTML = ``;
+            pokemon
+              .orderByChild("Max CP")
+              .limitToLast(20)
+              .on("child_added",visPokemon);
+          }
+
+          function visSvakeste(){
+            secAllePokemon.innerHTML = ``;
+            pokemon
+              .orderByChild("Max CP")
+              .limitToFirst(20)
+              .on("child_added",visPokemon);
+          }
+
+          function Dark(){
+            css.innerHTML = `
+            body{
+              background-color: black;
+              color: white;
+              transition-duration: .7s;
+            }`
+          }
+
+          function Light(){
+            css.innerHTML = `
+            body{
+              background-color: white;
+              color: black;
+              transition-duration: .7s;
+            }`
+          }
+
+      </script>
+    </body>
+  </html>

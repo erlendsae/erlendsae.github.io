@@ -1,0 +1,54 @@
+body{
+  background-url("bilde.jpg");
+
+  background-image: linear-gradient(white, red, black);
+  padding-bottom: 1000px;
+}
+@media(max-width:1400px){
+  body{
+  background-image: linear-gradient(white, yellow, black);
+  }
+}
+@media(max-width:1000px){
+  body{
+  background-image: linear-gradient(white, limegreen, black);
+  }
+}
+@media(max-width:800px){
+  body{
+  background-image: linear-gradient(white, red, black);
+  }
+}
+@media(max-width:600px){
+  body{
+  background-image: linear-gradient(white, cyan, black);
+  }
+}
+.matretter{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+section{
+  background-image: linear-gradient(yellow, white);
+  padding: 10px;
+}
+main{
+  padding-top: 50px;
+}
+@media(max-width:800px){
+.matretter{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+}
+@media(max-width:600px){
+.matretter{
+  grid-template-columns: 1fr 1fr;
+}
+}
+}
+@media(max-width:400px){
+.matretter{
+  grid-template-columns: 1fr 1fr;
+}
+}

@@ -1,0 +1,22 @@
+header{
+
+}
+main{
+  background-color: #009245;
+  padding: 5439px;
+}
+
+img{
+  width: 100%;
+  display: block;
+}
+body{
+  margin: 0;
+}
+h1{
+  padding: 300px;
+}
+footer{
+  background-color: gray;
+  padding: 300px;
+}

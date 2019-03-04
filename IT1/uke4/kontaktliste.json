@@ -1,0 +1,32 @@
+{
+"kontakter":
+  {
+    "1":{
+      "firstName":"Erlend Løken",
+      "lastName": "Sæveraas",
+      "telephone": 90950109,
+      "adress": "Høviksvingen 10A",
+      "BøkerPaNarrbordet": ["Filledokka","reee","retard"],
+      "likerInternett": true,
+      "utdanning":{
+      "videregaaende": "sandvika vgs",
+      "hoyreUtdanning":"reee"
+    }
+    },
+    "2":{
+      "firstName": "Thomas",
+      "lastName": "Winterbourne",
+      "telephone":93950225,
+      "adress": "helvete 30E"
+    },
+
+    "3":{
+      "firstName":"Erlend Løken",
+      "lastName": "Sæveraas",
+      "telephone": 90950109,
+      "adress": "Høviksvingen 10A",
+      "spill": ["leauge of legends", "geometry dash"],
+      "dyr": "katt"
+    }
+  }
+}

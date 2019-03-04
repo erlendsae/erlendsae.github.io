@@ -1,0 +1,54 @@
+header{
+  display: grid;
+  grid-template-columns: 10% 60% repeat(3,10%);
+  background-color: #eee;
+  align-items: center;
+}
+#hjem{
+  grid-column: 3;
+}
+
+
+main{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 50px;
+}
+ul{
+  list-style-type: none;
+  text-align:  center;
+  color: black;
+  background-color: white;
+  margin: 0;
+
+
+}
+li{
+
+  padding: 5px;
+  display: inline;
+}
+nav{
+  padding: 50px;
+    background-color: #eee;
+
+
+}
+body{
+  margin: 0;
+  background-color: #D8D8D8;
+}
+.middelsak{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.litensak{
+
+}
+.storsak{
+grid-column: span 3;
+grid-row: span 3;
+}
+img{
+  width: 90%;
+}

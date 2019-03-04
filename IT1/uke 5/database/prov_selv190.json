@@ -1,0 +1,68 @@
+{
+  "1": {
+    "oppgave": "Hva er en primærnøkkel?",
+    "svar": "En primærnøkkel er en unik nøkkel vi bruker for å skille objekter i databasen, og for å det enklere å søke"
+  },
+  "2": {
+    "a": {
+      "oppgave":"elever på en skole",
+      "svar": "feideID"
+    },
+    "b": {
+      "oppgave":"fritidsbåter",
+      "svar": "Registreringsnummer"
+    },
+    "c": {
+      "oppgave":"plante",
+      "svar": "Latinsk navn"
+    },
+    "d": {
+      "oppgave":"kontaktene dine",
+      "svar": "mobilnummer"
+    },
+    "e":{
+      "oppgave":"stjerner på himmelen",
+      "svar":"stjernenavn"
+    },
+    "3":{
+      "oppgave": "hva er en kandidatnøkkel",
+      "svar":"En kandidatnøkkel er en mulig primærnøkkel F.eks: mobilnummer eller personnummer"
+    },
+
+    "4":{
+      "oppgave":"hva er fremmednøkkel",
+      "svar":"en fremmednøkkel er en primærnøkkel som brukes på et annet objekt. Det er en henvisning til andre data i en annen database"
+    },
+
+    "5":{
+      "oppgave":"hva er normalisering",
+      "svar":"Teknikker, ting man gjør for databasen for å unngå dobbeltlagring. Bruk av fremmednøkkel er en teknikk for å unngå dobbeltlagring"
+    },
+    "6":{
+      "oppgave":"Lag et objekt med data om brukere av et dataspill. Bruk en fremmednøkkel som viser meldinger fra en av spillerene",
+      "svar":{
+        "brukere":{
+          "Photon":{
+            "passord":"passord123",
+            "highScore":5000
+          },
+          "xdNazarfa":{
+            "passord":"hayi4rf&&315",
+            "highScore":1337
+          }
+        },
+        "meldinger":{
+          "001":{
+            "tekst":"Hei xdNazarfa!",
+            "brukernavn":"Photon"
+          },
+          "002":{
+            "tekst":"Hallo Photon",
+            "brukernavn":"xdNazarfa"
+          }
+        }
+      }
+    }
+
+
+  }
