@@ -1,52 +1,61 @@
 <!DOCTYPE html>
 <html lang="nb" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Tema</title>
-    <link rel="stylesheet" href="style.css">
-    <style media="screen">
 
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="navbar">
-          <a href="index.html"><p>Hjem</p> </a>
-          <a href="nettsvindel.html"><p>tittel 1</p></a>
-          <a href="personvern.html"><p>tittel 2</p></a>
-          <a href="some.html"><p>tittel 3</p></a>
-        </div>
-      </nav>
-      <div class="knapper">
-      <button type="button" name="button" class="btn warning" onclick="Dark()">Mørketema</button>
-      <button type="button" name="button" class="btn danger" onclick="Light()">Lystema</button>
+<head>
+  <meta charset="utf-8">
+  <title>Tema</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="navbar">
+        <a href="index.html">
+          <p>Hjem</p>
+        </a>
+        <a href="nettsvindel.html">
+          <p>tittel 1</p>
+        </a>
+        <a href="personvern.html">
+          <p>tittel 2</p>
+        </a>
+        <a href="some.html">
+          <p>tittel 3</p>
+        </a>
+      </div>
+    </nav>
+    <div class="knapper">
+      <button type="button" name="button" onclick="Dark()">Mørketema</button>
     </div>
-    </header>
+    <div class="knapper">
+    <button type="button" name="button" onclick="Light()">Lystema</button>
+    </div>
+  </header>
 
-    <script type="text/javascript">
-
+  <script type="text/javascript">
     const css = document.querySelector("style");
-    function Dark(){
-        css.innerHTML = `
+
+    function Dark() {
+      css.innerHTML = `
         body{
           background-color: black;
           color: white;
           transition-duration: .7s;
          }`
-        }
-        function Light(){
-            css.innerHTML = `
+    }
+
+    function Light() {
+      css.innerHTML = `
             body{
               background-color: #e9e9e9;
               color: black;
               transition-duration: .7s;
              }
             `
-            }
+    }
+  </script>
+</body>
 
-
-    </script>
-  </body>
 </html>
-
