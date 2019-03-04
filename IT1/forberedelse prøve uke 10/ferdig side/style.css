@@ -5,6 +5,10 @@ body{
 header{
     font-size: 20px;
 }
+.knapper{
+  text-align: center;
+  padding: 20px;
+}
 .navbar{
   display: flex;
   justify-content: space-around;
@@ -26,8 +30,9 @@ header{
   transition: 1s;
   }
 
+
+
   @media(max-width:600px){
     body{
     background-color: gray;
     }
-
