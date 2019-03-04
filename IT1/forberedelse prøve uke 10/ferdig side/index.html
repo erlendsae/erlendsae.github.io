@@ -13,9 +13,34 @@
           <a href="nettsvindel.html"><p>tittel 1</p></a>
           <a href="personvern.html"><p>tittel 2</p></a>
           <a href="some.html"><p>tittel 3</p></a>
+          <button type="button" name="button" onclick="Dark()">Darkmode</button>
+          <button type="button" name="button" onclick="Light()">Lightmode</button>
         </div>
       </nav>
     </header>
+    <script type="text/javascript">
+
+    const css = document.querySelector("style");
+    function Dark(){
+        css.innerHTML = `
+        body{
+          background-color: black;
+          color: white;
+          transition-duration: .7s;
+         }`
+        }
+        function Light(){
+            css.innerHTML = `
+            body{
+              background-color: white;
+              color: black;
+              transition-duration: .7s;
+             }
+            `
+            }
+
+
+    </script>
   </body>
 </html>
 
