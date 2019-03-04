@@ -8,9 +8,8 @@ header{
 .navbar{
   display: flex;
   justify-content: space-around;
-  position: fixed;
   width: 100%;
-  background-color: rgb(184, 184, 184)
+  background-color: rgb(184, 184, 184);
 
 }
 .navbar>a{
@@ -31,4 +30,8 @@ header{
     body{
     background-color: gray;
     }
+
+.klasser{
+margin: auto;
+}
 
