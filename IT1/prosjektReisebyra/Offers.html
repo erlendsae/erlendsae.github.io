@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Saeveraas Travels</title>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA4DU6ym9WJhbQIhmFWe6dvvIIvpYOyehI",
+    authDomain: "saeveraas-travels.firebaseapp.com",
+    databaseURL: "https://saeveraas-travels.firebaseio.com",
+    projectId: "saeveraas-travels",
+    storageBucket: "",
+    messagingSenderId: "662591194660"
+  };
+  firebase.initializeApp(config);
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="Index.html"><img src="LitenLogo.png" alt=""></a>
+      <a href="Index.html"><div>Home</div></a>
+      <div>Offers</div>
+      <div>Destinations</div>
+      <div>About Us</div>
+      <div>
+    <a href="#"><p>Log In</p></a>
+      <p>Sign In</p>
+    </div>
+    </nav>
+  </header>
+  <main class="offers">
+    <button type="button" name="button" onclick="showAlfabetic()">Alfabetic</button>
+    <button type="button" name="button" onclick="showAllPokemon()">Continent</button>
+    </main>
+
+    <script type="text/javascript">
+      //Referanser til HTML-elementer
+      const main = document.querySelector("main");
+      const offers = document.querySelector(".offers");
+
+
+      const db = firebase.database();
+      const destinations = db.ref("destinations/destinations");
+
+      visAlleSalg();
+
+      function visAlleVarer(){
+        offers.innerHTML=``;
+        destinations.on("child_added",genererHTML);
+      }
+      function visAlleSalg(){
+        offers.innerHTML=``;
+        destinations.orderByChild("sale").equalTo(true).on("child_added",genererHTML);
+      }
+
+
+
+
+
+      function genererHTML(snapshot){
+       let dObject = snapshot.val();
+        let key = snapshot.key;
+
+       let sale = "";
+       if (dObject.sale){
+         sale = `On sale!`;
+       }
+
+
+      offers.innerHTML += `
+        <a href="travel.html?id=${key}"><section class="">
+        <h3>${dObject.Name}</h3>
+        <img id="imgD" src=${dObject["Image"]}>
+        <p>Country: ${dObject.Country}</p>
+        <p>Continent: ${dObject.Continent}</p>
+        <p>${sale}</p>
+        </section></a>`
+        }
+
+
+
+
+      </script>
+</body>
+
+</html>

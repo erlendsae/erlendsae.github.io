@@ -1,0 +1,76 @@
+nav{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-gap: 10px;
+  align-items: center;
+  text-align: center;
+  background-color: #e9e9e9;
+
+}
+nav a{
+  text-decoration: none;
+  color: black;
+}
+div button{
+  display: inline;
+  margin: 5px;
+}
+body{
+  margin: 0;
+}
+
+
+.slider {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+img{
+  width: 100%;
+}
+#img {
+  width: 100%;
+  height: 100%;
+  animation: ani 4s linear;
+
+}
+
+#logo{
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: block;
+  text-align: center;
+}
+
+/* kode til siden LogIn.html*/
+label{
+  padding: 20px;
+}
+#LogIn{
+  margin: 60px;
+}
+/* kode til siden Offers.html*/
+.offers{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  background-image: linear-gradient(rgb(203, 203, 203), white, rgb(203, 203, 203));
+  padding: 20px;
+
+}
+
+@keyframes ani {
+  0% {
+    transform: scale(1.2);
+  }
+  10% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Saeveraas Travels</title>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA4DU6ym9WJhbQIhmFWe6dvvIIvpYOyehI",
+    authDomain: "saeveraas-travels.firebaseapp.com",
+    databaseURL: "https://saeveraas-travels.firebaseio.com",
+    projectId: "saeveraas-travels",
+    storageBucket: "",
+    messagingSenderId: "662591194660"
+  };
+  firebase.initializeApp(config);
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="Index.html"><img src="LitenLogo.png" alt=""></a>
+      <a href="Index.html"><div>Home</div></a>
+      <div>Offers</div>
+      <div>Destinations</div>
+      <div>About Us</div>
+      <div>
+    <a href="#"><p>Log In</p></a>
+      <p>Sign In</p>
+    </div>
+    </nav>
+  </header>
+  <main>
+    <div class="LogIn">
+    <label for="InputEmail">E-mail:</label>
+    <input id="InputEmail" type="text" name="E-mail" placeholder="Write your name"> <br>
+    <label for="InputPassword">Password:</label>
+    <input id="InputPassword" type="password" name="Password" placeholder="Write your password">
+    </div>
+  </main>
+</body>
+
+</html>

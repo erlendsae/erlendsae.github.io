@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Saeveraas Travels</title>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA4DU6ym9WJhbQIhmFWe6dvvIIvpYOyehI",
+    authDomain: "saeveraas-travels.firebaseapp.com",
+    databaseURL: "https://saeveraas-travels.firebaseio.com",
+    projectId: "saeveraas-travels",
+    storageBucket: "",
+    messagingSenderId: "662591194660"
+  };
+  firebase.initializeApp(config);
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="Index.html"><img src="LitenLogo.png" alt=""></a>
+      <a href="Index.html"><div>Home</div></a>
+      <div>Offers</div>
+      <div>Destinations</div>
+      <div>About Us</div>
+      <div>
+    <a href="#"><p>Log In</p></a>
+      <p>Sign In</p>
+    </div>
+    </nav>
+  </header>
+  <main></main>
+    <script type="text/javascript">
+
+    const main = document.querySelector("main");
+
+      let url_string = window.location.href;
+      let url = new URL(url_string);
+      let id = url.searchParams.get("id");
+
+      console.log(id);
+
+      const db = firebase.database();
+      const destination = db.ref("destination");
+      const valgtTur = db.ref("destination/"+id);
+
+        visValgtTur();
+
+        function visValgtTur(){
+          main.innerHTML = ``;
+          valgtTur.on("value",genererHTML);
+        }
+
+
+
+        function genererHTML(snapshot){
+         let key = snapshot.key;
+         let dObject = snapshot.val();
+         console.log(key,dObject);
+
+
+        main.innerHTML+=`
+          <section class="">
+          <h3>${dObject.Name}</h3>
+          <img id="imgD" src=${dObject["Image"]}>
+          <p>Country: ${dObject.Country}</p>
+          <p>Continent: ${dObject.Continent}</p>
+          </section>`
+          }
+
+    </script>
+
+</body>
+</html>

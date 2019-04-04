@@ -1,0 +1,134 @@
+{
+  "destinations":{
+    "TravelDestination1":{
+      "Name":"Alicante",
+      "Country":"Spain",
+      "Continent": "Europe",
+      "Interest1": "Abroad",
+      "Interest2": "Relax",
+      "Interest3": "",
+      "Image": "AlicanteCrop3.jpg",
+    "sale": false
+  },
+
+    "TravelDestination2":{
+      "Name":"Amazonas",
+      "Country":"Brazil",
+      "Continent": "South-America",
+      "Interest1": "Abroad",
+      "Interest2": "activity",
+      "Interest3": "Impression",
+      "Image": "AmazonasCrop3.jpg",
+    "sale": true
+  },
+    "TravelDestination3":{
+      "Name":"Cairo",
+      "Country":"Egypt",
+      "Continent": "Africa",
+      "Interest1": "Abroad",
+      "Interest2": "Impression",
+      "Interest3": "Sightseeing",
+      "Image": "CairoCrop3.jpg",
+      "sale": true
+    },
+
+      "TravelDestination4":{
+        "Name":"Crete",
+        "Country":"Hellas",
+        "Continent": "Europe",
+        "Interest1": "Abroad",
+        "Interest2": "Relax",
+        "Interest3": "Sightseeing",
+        "Image": "CreteCrop3.jpg",
+        "sale": false
+      },
+
+    "TravelDestination5":{
+      "Name":"Galdhøpiggen",
+      "Country":"Norway",
+      "Continent": "Europe",
+      "Interest1": "Domestic",
+      "Interest2": "Impression",
+      "Interest3": "activity",
+      "Image": "GaldhopiggenCrop3.jpg",
+    "sale": true
+  },
+    "TravelDestination6":{
+      "Name":"Lake Garda",
+      "Country":"Italy",
+      "Continent": "Europe",
+      "Interest1": "Abroad",
+      "Interest2": "Relax",
+      "Interest3": "activity",
+      "Image": "LakeGardaCrop3.jpg",
+    "sale": true
+  },
+
+    "TravelDestination7":{
+      "Name":"Lofoten",
+      "Country":"Norway",
+      "Continent": "Europe",
+      "Interest1": "Domestic",
+      "Interest2": "Sightseeing",
+      "Interest3": "Impression",
+      "Image": "LofotenCrop3.jpg",
+    "sale": false
+  },
+
+    "TravelDestination8":{
+      "Name":"Machu Picchu",
+      "Country":"Peru",
+      "Continent": "South-America",
+      "Interest1": "Abroad",
+      "Interest2": "Sightseeing",
+      "Interest3": "Impression",
+      "Image": "MachuPicchuCrop3.jpg",
+    "sale": true
+  },
+
+    "TravelDestination9":{
+      "Name":"New York",
+      "Country":"the USA",
+      "Continent": "North-America",
+      "Interest1": "Abroad",
+      "Interest2": "Sightseeing",
+      "Interest3": "Relax",
+      "Image": "NewYorkCrop3.jpg",
+    "sale": true
+  },
+
+    "TravelDestination10":{
+      "Name":"Oslo",
+      "Country":"Norway",
+      "Continent": "Europe",
+      "Interest1": "Domestic",
+      "Interest2": "Sightseeing",
+      "Interest3": "Relax",
+      "Image": "OsloCrop3.jpg",
+    "sale": false
+  },
+
+    "TravelDestination11":{
+      "Name":"Paris",
+      "Country":"France",
+      "Continent": "Europe",
+      "Interest1": "Abroad",
+      "Interest2": "Sightseeing",
+      "Interest3": "Impression",
+      "Image": "ParisCrop3.jpg",
+    "sale": false
+  },
+
+    "TravelDestination12":{
+      "Name":"Reykjavik",
+      "Country":"Island",
+      "Continent": "Europe",
+      "Interest1": "Abroad",
+      "Interest2": "Impression",
+      "Interest3": "Relax",
+      "Image": "IslandCrop3.jpg",
+      "sale": false
+    }
+
+  }
+}
