@@ -5,33 +5,41 @@
   <meta charset="utf-8">
   <title>Saeveraas Travels</title>
   <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA4DU6ym9WJhbQIhmFWe6dvvIIvpYOyehI",
-    authDomain: "saeveraas-travels.firebaseapp.com",
-    databaseURL: "https://saeveraas-travels.firebaseio.com",
-    projectId: "saeveraas-travels",
-    storageBucket: "",
-    messagingSenderId: "662591194660"
-  };
-  firebase.initializeApp(config);
-</script>
-<link rel="stylesheet" href="style.css">
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA4DU6ym9WJhbQIhmFWe6dvvIIvpYOyehI",
+      authDomain: "saeveraas-travels.firebaseapp.com",
+      databaseURL: "https://saeveraas-travels.firebaseio.com",
+      projectId: "saeveraas-travels",
+      storageBucket: "",
+      messagingSenderId: "662591194660"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
     <nav>
       <a href="Index.html"><img src="LitenLogo.png" alt=""></a>
-      <a href="Index.html"><div>Home</div></a>
-      <div>Offers</div>
-      <div>Destinations</div>
-      <div>About Us</div>
+      <a href="Index.html">
+        <div>Home</div>
+      </a>
+      <a href="Offers.html">
+        <div>Offers</div>
+      </a>
+      <a href="Destinations.html">
+        <div>Destinations</div>
+      </a>
+      <a href="AboutUs.html" <div>About Us</div></a>
       <div>
-      <a href="LogIn.html"><p>Log In</p></a>
-      <p>Sign In</p>
-    </div>
+        <a href="LogIn.html">
+          <p>Log In</p>
+        </a>
+        <p>Sign In</p>
+      </div>
     </nav>
   </header>
   <main>
@@ -45,23 +53,25 @@
 
     </div>
     <script>
-
+      //javascript til slideshowet
       var images = ['IslandCrop2.jpg',
-      'LakeGardaCrop2.jpg',
-      'GaldhopiggenCrop2.jpg',
-      'AlicanteCrop2.jpg',
-      'AmazonasCrop2.jpg',
-      'CairoCrop2.jpg',
-      'CreteCrop2.jpg',
-      'ParisCrop2.jpg',
-      'MachuPicchuCrop2.jpg',
-      'NewYorkCrop2.jpg',
-      'OsloCrop2.jpg',
-      'LofotenCrop2.jpg'];
+        'LakeGardaCrop2.jpg',
+        'GaldhopiggenCrop2.jpg',
+        'AlicanteCrop2.jpg',
+        'AmazonasCrop2.jpg',
+        'CairoCrop2.jpg',
+        'CreteCrop2.jpg',
+        'ParisCrop2.jpg',
+        'MachuPicchuCrop2.jpg',
+        'NewYorkCrop2.jpg',
+        'OsloCrop2.jpg',
+        'LofotenCrop2.jpg'
+      ];
       var x = 0;
       var imgs = document.getElementById('img');
 
       setInterval(slider, 2000);
+
       function slider() {
 
         if (x < images.length) {
@@ -71,8 +81,6 @@
         }
         imgs.innerHTML = "<img src=" + images[x - 1] + ">";
       }
-
-
     </script>
 
   </main>

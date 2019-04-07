@@ -43,53 +43,45 @@
     <button type="button" name="button" onclick="showAlfabetic()">Alfabetic</button>
     <button type="button" name="button" onclick="showAllPokemon()">Continent</button>
   </header>
-  <main></main>
+  <main class="destination">
+
+  </main>
+
   <script type="text/javascript">
+    //Referanser til HTML-elementer
     const main = document.querySelector("main");
+    const destination = document.querySelector(".destination");
 
-    let url_string = window.location.href;
-    let url = new URL(url_string);
-    let id = url.searchParams.get("id");
-
-    console.log(id);
 
     const db = firebase.database();
-    const ref = "destinations/" + id;
-    console.log(ref);
-    const destination = db.ref("destinations");
-    const valgtTur = db.ref(ref);
+    const destinations = db.ref("destinations");
 
-    visValgtTur();
+    visAlleSalg();
 
-    function visValgtTur() {
-      main.innerHTML = ``;
-      valgtTur.on("value", genererHTML);
+    function visAlleVarer() {
+      destination.innerHTML = ``;
+      destinations.on("child_added", genererHTML);
     }
 
-
+    function visAlleSalg() {
+      destination.innerHTML = ``;
+      destinations.on("child_added", genererHTML);
+    }
 
     function genererHTML(snapshot) {
-      let key = snapshot.key;
       let dObject = snapshot.val();
-      console.log(key, dObject);
+      let key = snapshot.key;
 
-
-      main.innerHTML +=
+      destination.innerHTML +=
         `
-          <div class="travelInnhold">
-          <section>
-          <img id="imgDe" src=${dObject["Image"]}>
-          </section>
-          <section>
-          <h3>${dObject.Name}</h3>
-          </section>
-          <section class="text">
-          <p>${dObject.text}</p>
-          </section>
-          </div>`
+        <a href="travel.html?id=${key}"><section class="tur">
+        <h3>${dObject.Name}</h3>
+        <img id="imgD" src=${dObject["Image"]}>
+        <p>Country: ${dObject.Country}</p>
+        <p>Continent: ${dObject.Continent}</p>
+        </section></a>`
     }
   </script>
-
 </body>
 
 </html>
