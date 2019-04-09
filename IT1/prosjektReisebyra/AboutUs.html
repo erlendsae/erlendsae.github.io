@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Saeveraas Travels</title>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA4DU6ym9WJhbQIhmFWe6dvvIIvpYOyehI",
+      authDomain: "saeveraas-travels.firebaseapp.com",
+      databaseURL: "https://saeveraas-travels.firebaseio.com",
+      projectId: "saeveraas-travels",
+      storageBucket: "",
+      messagingSenderId: "662591194660"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="showNav">
+      <a href="Index.html"><img src="bilder/LitenLogo.png" alt=""></a>
+      <a href="Index.html">
+        <div>Home</div>
+      </a>
+      <a href="Offers.html">
+        <div>Offers</div></a>
+        <a href="Destinations.html">
+          <div>Destinations</div></a>
+          <a href="AboutUs.html">
+            <div>About Us</div></a>
+            <div>
+              <a href="#">
+                <p>Log In</p>
+              </a>
+              <p>Sign In</p>
+            </div>
+    </nav>
+    <nav class="">
+      <div class="dropdown1">
+        <button onclick="myFunction1()" class="dropbtn1">Menu</button>
+        <div id="myDropdown1" class="dropdown-content1">
+          <a href="Index.html">
+            <div>Home</div>
+          </a>
+          <a href="Offers.html">
+            <div>Offers</div></a>
+            <a href="Destinations.html">
+              <div>Destinations</div></a>
+              <a href="AboutUs.html">
+                <div>About Us</div></a>
+        </div>
+    </nav>
+  </header>
+  <main>
+
+    <section class="aboutUs">
+      <h1>About Us</h1>
+      <div class="aUTekst">
+      <p>Saeveraas Travels is a company that delivers a lot of different destinations to go to, weather you want to do activities or just want to relax. <br>
+        There are a lot of different destinations to choose from, and you can see which continent the destination is in and the country as well.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script type="text/javascript">
+
+    function myFunction1(){
+      document.getElementById("myDropdown1").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn1')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content1");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+  <footer>
+    <div>
+    <p>Contact Us</p>
+    <p>you can reach us by dialing 000 000 000, or read more about Saeveraas Travels on this page.
+    </p>
+
+  </div>
+  </footer>
+</body>
+
+</html>

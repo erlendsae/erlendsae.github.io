@@ -22,17 +22,17 @@
 
 <body>
   <header>
-    <nav>
-      <a href="Index.html"><img src="LitenLogo.png" alt=""></a>
+    <nav class="showNav">
+      <a href="Index.html"><img src="bilder/LitenLogo.png" alt=""></a>
       <a href="Index.html">
         <div>Home</div>
       </a>
       <a href="Offers.html">
-        <div>Offers</div>
+        <div>Offers</div></a>
         <a href="Destinations.html">
-          <div>Destinations</div>
+          <div>Destinations</div></a>
           <a href="AboutUs.html">
-            <div>About Us</div>
+            <div>About Us</div></a>
             <div>
               <a href="#">
                 <p>Log In</p>
@@ -40,32 +40,62 @@
               <p>Sign In</p>
             </div>
     </nav>
-    <button type="button" name="button" onclick="showAlfabetic()">Alfabetic</button>
-    <button type="button" name="button" onclick="showAllPokemon()">Continent</button>
+    <nav class="">
+      <div class="dropdown1">
+        <button onclick="myFunction1()" class="dropbtn1">Menu</button>
+        <div id="myDropdown1" class="dropdown-content1">
+          <a href="Index.html">
+            <div>Home</div>
+          </a>
+          <a href="Offers.html">
+            <div>Offers</div></a>
+            <a href="Destinations.html">
+              <div>Destinations</div></a>
+              <a href="AboutUs.html">
+                <div>About Us</div></a>
+        </div>
+    </nav>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Sort by</button>
+      <div id="myDropdown" class="dropdown-content">
+        <p onclick="visAlfabetisk()">Alfabet</p>
+        <p onclick="visKontinent()">Continent</p>
+      </div>
   </header>
-  <main class="destination">
+  <main>
+    <div id="load"><img src="bilder/loading3.gif" alt=""></div>
+    <section class="destination">
 
+    </section>
   </main>
 
   <script type="text/javascript">
     //Referanser til HTML-elementer
     const main = document.querySelector("main");
     const destination = document.querySelector(".destination");
-
+    const load = document.querySelector("#load");
 
     const db = firebase.database();
     const destinations = db.ref("destinations");
 
     visAlleSalg();
 
-    function visAlleVarer() {
+    function visAlleSalg() {
       destination.innerHTML = ``;
       destinations.on("child_added", genererHTML);
     }
 
-    function visAlleSalg() {
-      destination.innerHTML = ``;
-      destinations.on("child_added", genererHTML);
+    function visAlfabetisk(){
+    destination.innerHTML = ``
+    destinations.orderByChild("Name").startAt("A").endAt("Z").on("child_added",genererHTML);
+    }
+
+    function visKontinent(){
+      destination.innerHTML = ``
+      destinations.orderByChild("Continent").equalTo("Africa").on("child_added",genererHTML);
+      destinations.orderByChild("Continent").equalTo("Europe").on("child_added",genererHTML);
+      destinations.orderByChild("Continent").equalTo("North-America").on("child_added",genererHTML);
+      destinations.orderByChild("Continent").equalTo("South-America").on("child_added",genererHTML);
     }
 
     function genererHTML(snapshot) {
@@ -76,12 +106,56 @@
         `
         <a href="travel.html?id=${key}"><section class="tur">
         <h3>${dObject.Name}</h3>
-        <img id="imgD" src=${dObject["Image"]}>
+        <img id="imgD" src= bilder/${dObject["Image"]}>
         <p>Country: ${dObject.Country}</p>
         <p>Continent: ${dObject.Continent}</p>
         </section></a>`
+
+        if (destination != null) {
+          load.innerHTML =``
+        }
+    }
+    function myFunction1(){
+      document.getElementById("myDropdown1").classList.toggle("show");
+    }
+
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn1')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content1");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
     }
   </script>
+  <footer>
+    <div>
+    <p>Contact Us</p>
+    <p>you can reach us by dialing 000 000 000, or read more about Saeveraas Travels in <a href="AboutUs.html">About Us</a>.
+    </p>
+
+  </div>
+  </footer>
 </body>
 
 </html>
