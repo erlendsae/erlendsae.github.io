@@ -3,12 +3,29 @@
   font-family: sans-serif;
 }
 
-body {
-  margin: 0;
+*::selection{
+  background-color: lightblue;
 }
 
-#IndexMain {
-  background-color: #e9e9e9;
+body {
+  margin: 0;
+  height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+nav {
+  z-index: 2;
+}
+
+html {
+  height: 100%;
+}
+
+#Indexmain {
+  background-color: inherit;
 }
 
 #IndexNav {
@@ -20,7 +37,6 @@ body {
   font-family: sans-serif;
   position: fixed;
   box-shadow: 0.05vw 0.05vw;
-  z-index: 1;
 }
 
 #IndexNav2 {
@@ -33,7 +49,6 @@ body {
   position: fixed;
   top: 0;
   box-shadow: 0.05vw 0.05vw;
-  z-index: 1;
 }
 
 main img {
@@ -51,15 +66,17 @@ input {
 
 footer {
   display: grid;
-  grid-template-columns: repeat(13, 1fr);
-  padding-left: 5vw;
-  padding-right: 5vw;
-  background-color: white;
+  grid-template-columns: repeat(11, 1fr);
+  background-color: rgb(213, 213, 213);
   border-top: solid black 0.05vw;
+  bottom: 0;
+  padding-right: 25vw;
+  padding-left: 25vw;
 }
 
-footer section {
-  grid-column: span 3;
+footer h1 {
+  grid-column: span 11;
+  text-align: center;
 }
 
 main image {}
@@ -68,7 +85,11 @@ main image {}
   font-family: monospace;
   font-size: 1vw;
   text-align: center;
-  cursor: pointer;
+}
+
+.footertext {
+  grid-column: span 3;
+  text-align: center;
 }
 
 #Footerimg {
@@ -80,10 +101,16 @@ main image {}
   text-align: center;
 }
 
-#navLogin {
-  grid-column: span 2;
+#navLoginIndex {
+  grid-column: span 6;
   transform: none;
   color: black;
+  text-align: right;
+  font-size: 1.4vw;
+}
+
+#navLogin {
+  grid-column: span 2;
 }
 
 .navObjekt {
@@ -146,16 +173,13 @@ main image {}
 a {
   text-decoration: none;
   color: black;
-}
-
-.innholdLogIn h1 {
-  padding-bottom: 4vw;
+  font-size: 1.4vw;
 }
 
 .LogIn {
   text-align: center;
   padding: 10vw;
-  background-color: #e9e9e9;
+  padding-bottom: 0vw;
 }
 
 .LogIn h1 {
@@ -196,7 +220,9 @@ a {
   grid-column: span 2;
 }
 
-#Annonse {}
+#Annonse {
+
+}
 
 .Rundt {
   margin-bottom: 5vw;
@@ -221,6 +247,10 @@ a {
 .tekstInnhold {
   margin: 10vw;
   margin-top: 12vw;
+  padding: 1vw;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  background-color: #e9e9e9;
 }
 
 .tekstOverskrift {
@@ -230,7 +260,7 @@ a {
 
 .tekstInformasjon {
   font-size: 1.2vw;
-  text-align: center;
+  text-align: left;
 }
 
 .Inni section {
@@ -246,4 +276,26 @@ a {
   background-color: rgb(198, 198, 198);
   transform: scale(1.1);
   transition: .2s ease-in;
+}
+
+.jobbTema {
+  margin: 20vw;
+  text-align: center;
+}
+
+.jobbInnhold {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: solid black 0.3vw;
+}
+
+.jobbInnhold section {
+  padding: 1vw;
+  border-bottom: solid black 0.1vw;
+  border-right: solid black 0.1vw;
+  border-left: solid black 0.1vw;
+}
+
+.jobbInnhold section p {
+  text-align: left;
 }
